@@ -1,0 +1,8 @@
+# GitHub Pages: publish only the site, not the project notes.
+exclude:
+  - README.md
+  - PRODUCT.md
+  - DESIGN.md
+  - assets/shots/*.json
+  - assets/*.json
+  - cv

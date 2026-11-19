@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eduardo Alves · Full-stack developer</title>
+  <meta name="description" content="Eduardo Alves, full-stack developer in Leiria, Portugal. I build whole web products, from the database to launch day: EZLuga, FindYourClub, upcc.pt and more.">
+  <meta name="theme-color" content="#0a0b09">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Eduardo Alves · Full-stack developer">
+  <meta property="og:description" content="I build whole products, from the database to launch day.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Schibsted+Grotesk:wght@400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="Eduardo Alves, back to top" data-i18n-attr="aria-label:a.top">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8.5 9.5h7M8.5 16h6M8.5 22.5h7M8.5 9.5v13" stroke="#0a0b09" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M18 22.5l4.25-13 4.25 13M19.6 17.6h5.3" stroke="#0a0b09" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="brand__name">Eduardo Alves</span>
+      </a>
+      <nav class="nav__links" aria-label="Sections" data-i18n-attr="aria-label:a.sections">
+        <span class="nav__pill" aria-hidden="true"></span>
+        <a href="#products" data-i18n="nav.products">Products</a>
+        <a href="#lab" data-i18n="nav.lab">Lab</a>
+        <a href="#job" data-i18n="nav.job">Day job</a>
+        <a href="#ai" data-i18n="nav.ai">AI</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+      </nav>
+      <div class="nav__end">
+        <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:a.lang">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+        </div>
+        <a class="btn btn--lime btn--sm nav__cta" href="#contact" data-i18n="nav.cta">Let's talk</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+          <span class="sr" data-i18n="nav.menu">Menu</span>
+          <span class="menu-btn__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+    <div class="menu" id="menu" hidden>
+      <a href="#products" data-i18n="nav.products">Products</a>
+      <a href="#lab" data-i18n="nav.lab">Lab</a>
+      <a href="#job" data-i18n="nav.job">Day job</a>
+      <a href="#ai" data-i18n="nav.ai">AI</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#contact" data-i18n="nav.cta">Let's talk</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <h1 class="hero__title" id="hero-title" data-i18n-html="hero.title">I build <em>whole products</em>, from the database to launch day.</h1>
+      <p class="hero__sub" data-i18n="hero.sub">Full-stack developer in Leiria, Portugal. By day I build ERP/MES platforms for manufacturing. At home I ship my own products, with AI where it earns its place.</p>
+      <div class="hero__actions">
+        <a class="btn btn--lime" href="#contact">
+          <span data-i18n="hero.cta">Start a project</span>
+          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#products" data-i18n="hero.see">See the work</a>
+        <p class="status"><span class="status__face"><img src="assets/portrait.webp" width="32" height="32" alt="" decoding="async"><span class="status__dot" aria-hidden="true"></span></span><span data-i18n="hero.status">Taking on freelance projects</span></p>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section wrap" id="products" aria-labelledby="products-title">
+      <header class="section__head" data-reveal>
+        <h2 id="products-title" data-i18n="products.title">Products I've shipped</h2>
+        <p data-i18n="products.sub">Three live products, each built end to end: data model, API, interface, deploy, and the launch around it.</p>
+      </header>
+
+      <div class="bento bento--products" data-spotlight>
+        <article class="tile tile--ezluga" data-reveal>
+          <div class="tile__body">
+            <h3 class="tile__title">EZLuga</h3>
+            <p class="tile__role" data-i18n="ez.role">Co-founder &amp; developer</p>
+            <p class="tile__desc" data-i18n="ez.desc">Equipment rental marketplace for Portugal: a public site in three languages, a staff admin with role-based access, and a Go API behind both.</p>
+            <p class="tile__fact"><span class="tile__fact-mark" aria-hidden="true"></span><span data-i18n="ez.fact">ZÉ, the AI assistant, costs about $0.03–0.05 per conversation and stores no message text.</span></p>
+            <ul class="chips" aria-label="Stack"><li>React</li><li>TypeScript</li><li>Go</li><li>PostgreSQL</li><li>Redis</li><li>MinIO</li><li>Claude API</li><li>Playwright</li></ul>
+            <a class="tile__link" href="https://ezluga.pt" target="_blank" rel="noopener">ezluga.pt<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a>
+          </div>
+          <div class="tile__media tile__media--ezluga">
+            <img src="assets/shots/ezluga.webp" width="1420" height="690" loading="lazy" decoding="async" alt="EZLuga home page with the search for equipment near you" data-i18n-attr="alt:ez.alt">
+            <div class="chat" role="group" aria-label="Demo conversation with the ZÉ assistant" data-i18n-attr="aria-label:ez.chatLabel">
+              <p class="chat__tag" data-i18n="demo">Demo</p>
+              <p class="chat__msg chat__msg--user" data-i18n="ez.chat1">I need to level a garden of about 200 m².</p>
+              <p class="chat__msg chat__msg--bot"><span class="chat__name">ZÉ</span><span data-i18n="ez.chat2">A mini excavator does that in a day. I found three near Leiria. Want me to draft the request?</span></p>
+              <p class="chat__typing" aria-hidden="true"><span></span><span></span><span></span></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile tile--upcc" data-reveal style="--d:1">
+          <div class="tile__body">
+            <h3 class="tile__title">upcc.pt</h3>
+            <p class="tile__role" data-i18n="upcc.role">For the civil protection unit of Caranguejeira</p>
+            <p class="tile__desc" data-i18n="upcc.desc">Installable web app for a parish: weather warnings, a family preparedness plan, what-to-do guides and live wildfire incidents. The unit edits it without touching code.</p>
+            <ul class="chips" aria-label="Stack"><li>PWA</li><li>JavaScript</li><li>GitHub Actions</li><li>Pages CMS</li></ul>
+            <a class="tile__link" href="https://upcc.pt" target="_blank" rel="noopener">upcc.pt<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a>
+          </div>
+          <div class="tile__media tile__media--phone">
+            <img src="assets/shots/upcc.webp" width="520" height="1125" loading="lazy" decoding="async" alt="upcc.pt home screen on a phone: no warnings today, family preparedness at 60 percent" data-i18n-attr="alt:upcc.alt">
+          </div>
+        </article>
+
+        <article class="tile tile--fyc" data-reveal>
+          <div class="tile__body">
+            <h3 class="tile__title">FindYourClub</h3>
+            <p class="tile__role" data-i18n="fyc.role">Built solo</p>
+            <p class="tile__desc" data-i18n="fyc.desc">Sports recruitment platform connecting players, coaches, clubs and scouts: opportunities, applications with chat, ranks, verified profiles and a Stripe store, in English and Portuguese.</p>
+            <ul class="chips" aria-label="Stack"><li>.NET 10</li><li>Blazor WASM</li><li>ASP.NET Core</li><li>SQL Server</li><li>EF Core</li><li>Stripe</li><li>Docker</li></ul>
+            <a class="tile__link" href="https://findyourclub.pt" target="_blank" rel="noopener">findyourclub.pt<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a>
+          </div>
+          <div class="tile__media tile__media--fyc">
+            <p class="chat__tag tile__tag" data-i18n="demoData">Demo data</p>
+            <img src="assets/shots/fyc.webp" width="652" height="380" loading="lazy" decoding="async" alt="FindYourClub opportunities: a scout role and a goalkeeper coach role with Quick Apply buttons" data-i18n-attr="alt:fyc.alt">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Lab -->
+    <section class="section wrap" id="lab" aria-labelledby="lab-title">
+      <header class="section__head" data-reveal>
+        <h2 id="lab-title" data-i18n="lab.title">Lab: what I build at home</h2>
+        <p data-i18n="lab.sub">Experiments that solve my own problems, packaged so friends and family can use them too.</p>
+      </header>
+
+      <div class="bento bento--lab" data-spotlight>
+        <article class="tile tile--hands" data-reveal>
+          <div class="tile__media tile__media--bleed">
+            <img src="assets/shots/hands3d.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Hands 3D: a table exploded into a blue hologram, with two tracked hands pulling it apart" data-i18n-attr="alt:hands.alt">
+          </div>
+          <div class="tile__body">
+            <h3 class="tile__title">Hands 3D</h3>
+            <p class="tile__desc" data-i18n="hands.desc">Build an IKEA LACK table with your bare hands in front of the webcam, explode it into a hologram, or draw in the air.</p>
+            <ul class="chips" aria-label="Stack"><li>three.js</li><li>MediaPipe</li><li>TypeScript</li><li>Vite</li></ul>
+          </div>
+        </article>
+
+        <article class="tile tile--bets" data-reveal style="--d:1">
+          <div class="tile__body">
+            <h3 class="tile__title">Football Bets</h3>
+            <p class="tile__desc" data-i18n="bets.desc">Desktop app that lists today's games, has a Claude agent analyse one and suggest three bets, then checks whether its own estimates beat the bookmakers'.</p>
+            <ul class="chips" aria-label="Stack"><li>Electron</li><li>React</li><li>TypeScript</li><li>Claude Haiku</li></ul>
+          </div>
+          <figure class="calib">
+            <table>
+              <caption data-i18n="bets.caption">How well the analysis is calibrated, from real results</caption>
+              <thead><tr><th scope="col" data-i18n="bets.risk">Risk</th><th scope="col" data-i18n="bets.hit">Hit rate</th><th scope="col" data-i18n="bets.est">Estimated</th><th scope="col" data-i18n="bets.gap">Gap</th></tr></thead>
+              <tbody>
+                <tr><th scope="row" data-i18n="bets.low">Low</th><td>71%</td><td>76%</td><td><span class="bar" style="--v:5"></span>−5</td></tr>
+                <tr><th scope="row" data-i18n="bets.med">Medium</th><td>46%</td><td>55%</td><td><span class="bar" style="--v:9"></span>−9</td></tr>
+                <tr><th scope="row" data-i18n="bets.high">High</th><td>25%</td><td>31%</td><td><span class="bar" style="--v:6"></span>−6</td></tr>
+                <tr><th scope="row" data-i18n="bets.top">Top pick</th><td>60%</td><td>62%</td><td><span class="bar" style="--v:2"></span>−2</td></tr>
+              </tbody>
+            </table>
+          </figure>
+        </article>
+
+        <article class="tile tile--home" data-reveal>
+          <div class="tile__body">
+            <h3 class="tile__title">HomeControl</h3>
+            <p class="tile__desc" data-i18n="home.desc">One app on the PC and Android phones for the TV, the TV box, three air conditioners and the Roomba, synced between devices with encryption.</p>
+            <ul class="chips" aria-label="Stack"><li>Python</li><li>aiohttp</li><li>Android</li><li>MQTT/mTLS</li></ul>
+          </div>
+          <div class="devices" role="group" aria-label="Demo controls" data-i18n-attr="aria-label:home.label">
+            <p class="chat__tag" data-i18n="demo">Demo</p>
+            <button class="device" type="button" aria-pressed="true"><span class="device__name" data-i18n="home.tv">TV</span><span class="device__state"><span data-i18n="home.on">On</span></span><span class="switch" aria-hidden="true"></span></button>
+            <button class="device" type="button" aria-pressed="true"><span class="device__name" data-i18n="home.ac">Living room AC</span><span class="device__state">22°</span><span class="switch" aria-hidden="true"></span></button>
+            <button class="device" type="button" aria-pressed="false"><span class="device__name">Roomba</span><span class="device__state" data-i18n="home.dock">Docked</span><span class="switch" aria-hidden="true"></span></button>
+          </div>
+        </article>
+
+        <article class="tile tile--gestures" data-reveal style="--d:1">
+          <div class="tile__body">
+            <h3 class="tile__title">Hand Gestures</h3>
+            <p class="tile__desc" data-i18n="gest.desc">Control the PC with hand gestures. Face recognition picks your profile and locks out anyone it doesn't know. No photos are stored.</p>
+            <ul class="chips" aria-label="Stack"><li>Python</li><li>OpenCV</li><li>MediaPipe</li></ul>
+          </div>
+          <svg class="handviz" viewBox="0 0 200 200" role="img" aria-label="Hand tracked as 21 landmarks" data-i18n-attr="aria-label:gest.label">
+            <g class="handviz__bones">
+              <path d="M100 185L72 170L52 148L40 126L32 106"/>
+              <path d="M100 185L78 112L72 80L68 58L65 38"/>
+              <path d="M78 112L100 108L100 72L100 48L100 26"/>
+              <path d="M100 108L120 112L126 80L130 58L133 40"/>
+              <path d="M120 112L138 122L148 98L154 82L158 66M100 185L138 122"/>
+            </g>
+            <g class="handviz__joints">
+              <circle cx="100" cy="185" r="3.2"/><circle cx="72" cy="170" r="3.2"/><circle cx="52" cy="148" r="3.2"/><circle cx="40" cy="126" r="3.2"/><circle cx="32" cy="106" r="3.2"/>
+              <circle cx="78" cy="112" r="3.2"/><circle cx="72" cy="80" r="3.2"/><circle cx="68" cy="58" r="3.2"/>
+              <circle cx="100" cy="108" r="3.2"/><circle cx="100" cy="72" r="3.2"/><circle cx="100" cy="48" r="3.2"/><circle cx="100" cy="26" r="3.2"/>
+              <circle cx="120" cy="112" r="3.2"/><circle cx="126" cy="80" r="3.2"/><circle cx="130" cy="58" r="3.2"/><circle cx="133" cy="40" r="3.2"/>
+              <circle cx="138" cy="122" r="3.2"/><circle cx="148" cy="98" r="3.2"/><circle cx="154" cy="82" r="3.2"/><circle cx="158" cy="66" r="3.2"/>
+              <circle class="handviz__tip" cx="65" cy="38" r="5"/>
+            </g>
+          </svg>
+        </article>
+
+        <article class="tile tile--drive" data-reveal style="--d:2">
+          <div class="tile__body">
+            <h3 class="tile__title">Drive Helper</h3>
+            <p class="tile__desc" data-i18n="drive.desc">Ask Alexa to find, read, summarise or edit your Google Docs. A Claude agent does the work, and every edit waits for a spoken yes.</p>
+            <ul class="chips" aria-label="Stack"><li>Alexa</li><li>AWS Lambda</li><li>Node.js</li><li>Claude API</li></ul>
+          </div>
+          <div class="voice" role="group" aria-label="Demo voice exchange" data-i18n-attr="aria-label:drive.label">
+            <p class="chat__tag" data-i18n="demo">Demo</p>
+            <p class="voice__line" data-i18n="drive.v1">“Add buy milk to my shopping list.”</p>
+            <p class="voice__line voice__line--bot" data-i18n="drive.v2">“Should I go ahead?”</p>
+            <p class="voice__line" data-i18n="drive.v3">“Yes.”</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Day job -->
+    <section class="section wrap" id="job" aria-labelledby="job-title">
+      <div class="job">
+        <div class="job__text" data-reveal>
+          <h2 id="job-title" data-i18n="job.title">By day: software for factory floors</h2>
+          <p class="job__where"><strong data-i18n="job.role">Software Developer</strong>&nbsp;· GetGain Solutions, Leiria&nbsp;· <span data-i18n="job.since">March 2024 – now</span></p>
+          <p data-i18n="job.p1">I work on a multi-tenant ERP/MES platform that runs production for several industrial clients from one shared core. I build complete modules end to end: SQL Server schema, ASP.NET Core API, Blazor Server interface, permissions, translations and reports.</p>
+          <p data-i18n="job.p2">I own the integrations with outside systems, run four projects in parallel, and coordinate and review the work of other developers.</p>
+          <ul class="modules" aria-label="Modules delivered" data-i18n-attr="aria-label:job.modules">
+            <li data-i18n="job.m1">Production allocation &amp; timesheets</li>
+            <li data-i18n="job.m2">Shop-floor terminal</li>
+            <li data-i18n="job.m3">Material consumption</li>
+            <li data-i18n="job.m4">Proposals &amp; budgets</li>
+            <li data-i18n="job.m5">Invoicing &amp; receipts</li>
+            <li data-i18n="job.m6">Payment plans</li>
+            <li data-i18n="job.m7">Document management</li>
+            <li data-i18n="job.m8">Dashboards &amp; KPIs</li>
+          </ul>
+          <blockquote class="job__quote">
+            <p data-i18n="job.quote">In 2017 I worked in a factory, taking pallets apart. Now I write the software factories run on.</p>
+          </blockquote>
+        </div>
+        <div class="job__spec" data-reveal style="--d:1">
+          <dl class="spec">
+            <div><dt data-i18n="job.k1">Database</dt><dd>SQL Server&nbsp;· SSDT/DACPAC&nbsp;· <span data-i18n="job.v1">20+ schemas, 200+ tables</span></dd></div>
+            <div><dt>Backend</dt><dd>.NET 8/10&nbsp;· ASP.NET Core&nbsp;· EF Core&nbsp;· Dapper&nbsp;· Hangfire&nbsp;· SignalR</dd></div>
+            <div><dt data-i18n="job.k3">Interface</dt><dd>Blazor Server&nbsp;· Syncfusion&nbsp;· BoldReports</dd></div>
+            <div><dt data-i18n="job.k4">Integrations</dt><dd data-i18n="job.v4">REST &amp; SOAP&nbsp;· worker services&nbsp;· incremental sync</dd></div>
+            <div><dt data-i18n="job.k5">Migration</dt><dd data-i18n="job.v5">Legacy ERP/MES, about 300 tables mapped and loaded</dd></div>
+            <div><dt>DevOps</dt><dd>Git&nbsp;· Azure DevOps&nbsp;· CI/CD&nbsp;· code review</dd></div>
+          </dl>
+          <div class="side-note">
+            <h3 data-i18n="job.toolTitle">Also built at work: a release tracker</h3>
+            <p data-i18n="job.tool">An internal app for the team: branches, client publications and notices, synced live, with levels and a cosmetics shop to make releasing fun.</p>
+            <ul class="chips" aria-label="Stack"><li>Node.js</li><li>SQL Server</li><li>Server-Sent Events</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI -->
+    <section class="section wrap" id="ai" aria-labelledby="ai-title">
+      <header class="section__head" data-reveal>
+        <h2 id="ai-title" data-i18n="ai.title">AI, with guardrails</h2>
+        <p data-i18n="ai.sub">I use AI two ways: as a daily development partner, and as a part inside the products I build. In both, cost, privacy and a human yes come first.</p>
+      </header>
+      <div class="ai">
+        <figure class="measure" data-reveal>
+          <figcaption>
+            <span class="measure__title">ZÉ</span>
+            <span class="measure__sub" data-i18n="ai.rsub">EZLuga's assistant, measured</span>
+          </figcaption>
+          <dl>
+            <div><dt data-i18n="ai.r1">Model</dt><dd data-i18n="ai.r1v">Claude Haiku, tool use, streamed</dd></div>
+            <div><dt data-i18n="ai.r2">Cached prompt</dt><dd>~11.6K tokens</dd></div>
+            <div><dt data-i18n="ai.r3">Cost per conversation</dt><dd class="hl">$0.03–0.05</dd></div>
+            <div><dt data-i18n="ai.r4">Knowledge base</dt><dd data-i18n="ai.r4v">139 guides, each approved by a person</dd></div>
+            <div><dt data-i18n="ai.r5">Structured output</dt><dd data-i18n="ai.r5v">14/15 when it should, 0/6 when it shouldn't</dd></div>
+            <div><dt data-i18n="ai.r6">Message text stored</dt><dd class="hl" data-i18n="ai.r6v">None</dd></div>
+            <div><dt data-i18n="ai.r7">Daily spend</dt><dd data-i18n="ai.r7v">Hard limit</dd></div>
+          </dl>
+        </figure>
+        <ol class="principles">
+          <li data-reveal><h3 data-i18n="ai.p1t">Context first</h3><p data-i18n="ai.p1">Conventions, architecture and gotchas are written down in each repo, so the assistant's output matches the codebase.</p></li>
+          <li data-reveal style="--d:1"><h3 data-i18n="ai.p2t">Verify, don't trust</h3><p data-i18n="ai.p2">Tests, mutation checks, property-based tests and end-to-end suites decide whether AI-written code is accepted.</p></li>
+          <li data-reveal style="--d:2"><h3 data-i18n="ai.p3t">A human says yes</h3><p data-i18n="ai.p3">I review and commit by hand, approve generated content before it ships, and design agents to confirm before they write.</p></li>
+          <li data-reveal style="--d:3"><h3 data-i18n="ai.p4t">Cost and privacy are requirements</h3><p data-i18n="ai.p4">Budgets, caps, consent and data minimisation are built in from day one, not added later.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Toolbox -->
+    <section class="section section--tight" aria-labelledby="tools-title">
+      <div class="wrap">
+        <header class="section__head" data-reveal>
+          <h2 id="tools-title" data-i18n="tools.title">Toolbox</h2>
+        </header>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>C#</span><span>.NET</span><span>TypeScript</span><span>React</span><span>Go</span><span>SQL Server</span><span>PostgreSQL</span><span>Blazor</span><span>Python</span><span>Claude API</span><span>Docker</span><span>three.js</span><span>Electron</span><span>Playwright</span>
+          <span>C#</span><span>.NET</span><span>TypeScript</span><span>React</span><span>Go</span><span>SQL Server</span><span>PostgreSQL</span><span>Blazor</span><span>Python</span><span>Claude API</span><span>Docker</span><span>three.js</span><span>Electron</span><span>Playwright</span>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="tools" data-reveal>
+          <div><h3 data-i18n="tools.lang">Languages</h3><p>C#&nbsp;· TypeScript&nbsp;· JavaScript&nbsp;· Go&nbsp;· Python&nbsp;· T&#8209;SQL&nbsp;· HTML/CSS</p></div>
+          <div><h3>Frontend</h3><p>React&nbsp;· Blazor&nbsp;· Vite&nbsp;· Tailwind&nbsp;· shadcn/ui&nbsp;· three.js&nbsp;· Electron&nbsp;· Syncfusion</p></div>
+          <div><h3>Backend</h3><p>ASP.NET Core&nbsp;· Node.js&nbsp;· Go/Echo&nbsp;· EF Core&nbsp;· Dapper&nbsp;· Hangfire&nbsp;· SignalR</p></div>
+          <div><h3 data-i18n="tools.data">Data</h3><p>SQL Server&nbsp;· PostgreSQL&nbsp;· Redis&nbsp;· MinIO&nbsp;· SSDT/DACPAC</p></div>
+          <div><h3 data-i18n="tools.ai">AI</h3><p>Claude API&nbsp;· Claude Code&nbsp;· MCP&nbsp;· MediaPipe&nbsp;· OpenCV</p></div>
+          <div><h3 data-i18n="tools.ship">Ship &amp; test</h3><p>Docker&nbsp;· GitHub Actions&nbsp;· Azure DevOps&nbsp;· Caddy&nbsp;· AWS Lambda&nbsp;· Playwright&nbsp;· Vitest</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section wrap" id="about" aria-labelledby="about-title">
+      <div class="about">
+        <div class="about__intro" data-reveal>
+          <img class="about__face" src="assets/portrait.webp" width="250" height="250" loading="lazy" decoding="async" alt="Portrait of Eduardo Alves" data-i18n-attr="alt:about.alt">
+          <h2 id="about-title" data-i18n="about.title">The path</h2>
+          <p data-i18n="about.p1">I'm Eduardo, from Leiria. My final project in school was a management app for football clubs, and I still coach youth goalkeepers. I'm happiest when something I built is in someone's hands.</p>
+          <dl class="langs">
+            <div><dt data-i18n="about.pt">Portuguese</dt><dd data-i18n="about.native">Native</dd></div>
+            <div><dt data-i18n="about.en">English</dt><dd>B2</dd></div>
+            <div><dt data-i18n="about.es">Spanish</dt><dd>A2</dd></div>
+          </dl>
+          <a class="btn btn--ghost about__cv" href="assets/cv/Eduardo-Alves-CV-EN.pdf" download data-i18n-attr="href:cv.href">
+            <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M3 13.5h10"/></svg>
+            <span data-i18n="cv.label">Download CV (PDF)</span>
+          </a>
+        </div>
+        <ol class="timeline" data-reveal style="--d:1">
+          <li class="is-now"><span class="timeline__year">2024 –</span><div><h3 data-i18n="t.1">Software Developer</h3><p>GetGain Solutions</p></div></li>
+          <li class="is-now"><span class="timeline__year">2021 –</span><div><h3 data-i18n="t.2">Youth goalkeeper coach</h3><p>GDR Boavista · <span data-i18n="t.2b">before: Escola de Guarda-Redes António Dias</span></p></div></li>
+          <li><span class="timeline__year">2022</span><div><h3>Future Analyst &amp; Co-creator</h3><p>Demola Global</p></div></li>
+          <li><span class="timeline__year">2017 – 23</span><div><h3 data-i18n="t.4">BSc Computer Engineering</h3><p data-i18n="t.ipl">Polytechnic of Leiria</p></div></li>
+          <li><span class="timeline__year">2017</span><div><h3 data-i18n="t.5">Factory worker</h3><p>Rotom</p></div></li>
+          <li><span class="timeline__year">2014 – 16</span><div><h3 data-i18n="t.6">Higher technical course, information systems programming</h3><p><span data-i18n="t.ipl">Polytechnic of Leiria</span> · <span data-i18n="t.6b">internship at Leiridata</span></p></div></li>
+          <li><span class="timeline__year">2011 – 14</span><div><h3 data-i18n="t.7">IT management &amp; programming technician</h3><p>Escola Secundária Domingos Sequeira · <span data-i18n="t.7b">final project: football management software</span></p></div></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact__inner">
+      <h2 id="contact-title" data-i18n="contact.title">Have a product in mind?</h2>
+      <p class="contact__sub" data-i18n="contact.sub">Tell me what you want to build. I'll come back with questions, a plan and an honest estimate.</p>
+      <div class="contact__actions">
+        <a class="btn btn--ink" id="mail-link" href="#contact" data-u="eduardo1996alves" data-d="gmail.com">
+          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M2.5 4.5L8 9l5.5-4.5"/></svg>
+          <span data-i18n="contact.email">Send an email</span>
+        </a>
+        <button class="copy" type="button" id="copy-mail" aria-live="polite">
+          <span class="copy__addr">eduardo1996alves [at] gmail.com</span>
+          <span class="copy__state">
+            <svg class="i copy__icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="8.5" height="8.5" rx="1.5"/><path d="M3 10.5V3.5A1 1 0 0 1 4 2.5h7"/></svg>
+            <svg class="i copy__done" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>
+            <span class="copy__label" data-i18n="contact.copy">Copy</span>
+          </span>
+        </button>
+      </div>
+      <ul class="contact__links">
+        <li><a href="https://www.linkedin.com/in/eduardo-alves-308007253/" target="_blank" rel="noopener">LinkedIn<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a></li>
+        <li><a href="assets/cv/Eduardo-Alves-CV-EN.pdf" download data-i18n-attr="href:cv.href"><span data-i18n="cv.short">CV (PDF)</span><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M3 13.5h10"/></svg></a></li>
+        <li><a href="https://github.com/edualves96" target="_blank" rel="noopener">GitHub<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© 2026 Eduardo Alves</p>
+      <p>Leiria, Portugal&nbsp;· <time id="clock">--:--</time></p>
+      <p data-i18n="footer.built">Hand-built with HTML, CSS and JavaScript.</p>
+      <a href="#top" data-i18n="footer.top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
