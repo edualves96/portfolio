@@ -27,7 +27,7 @@ A developer who ships whole products, not tickets: co-founded and built a rental
 ## Operating Context
 
 - Day job: Software Developer at GetGain Solutions, Leiria (since 2024-03). Multi-tenant industrial ERP/MES; .NET 8/10, ASP.NET Core, Blazor Server, SQL Server/SSDT, integrations, reporting. Runs four projects in parallel and coordinates other developers.
-- Home projects live in D:\DEV\WEB: EZLuga, FindYourClub, protecao_civil (upcc.pt), football-bets, hand-gestures, hands-3d, HomeControl, alexa-drive-agent, ReleasesGGS (internal tool at work), app-launch-motion.
+- Home projects: EZLuga, FindYourClub, protecao_civil (upcc.pt), football-bets, hand-gestures, hands-3d, HomeControl, alexa-drive-agent, ReleasesGGS (internal tool at work), app-launch-motion.
 - Off the keyboard: youth goalkeeper coach since 2021.
 
 ## Capabilities and Constraints
@@ -45,7 +45,7 @@ A developer who ships whole products, not tickets: co-founded and built a rental
 
 ## Evidence on Hand
 
-- CVs: C:\Users\35191\Desktop\Docs\CV A USAR\CV_EN_EduardoAlves.pdf, Desktop\Eduardo_Alves_CV_AI_EN.docx, D:\Trans\CV_Resumo_Eduardo_Alves.md.
+- CVs: the owner's Europass CV (EN/PT), an AI-focused CV and a CV summary, kept offline. The public one-page CVs are generated from `cv/cv.html`.
 - Screenshots: FindYourClub/slide-screenshots, football-bets/previews, hands-3d/captures, Insta/screenshots (EZLuga site).
 - Live products: ezluga.pt, findyourclub.pt, upcc.pt.
 - Measured AI facts (from the AI CV): ZÉ assistant cost ~$0.03–0.05 per conversation, ~11.6K-token cached prompt, 139 approved equipment guides, structured-output reliability 14/15 and 0/6.
