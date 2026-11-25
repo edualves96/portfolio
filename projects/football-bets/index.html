@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Football Bets · Eduardo Alves</title>
+  <meta name="description" content="A desktop app that lists today&#x27;s football games, has a Claude agent analyse the ones you pick and suggest three bets, then keeps score of whether its estimates actually beat the bookmakers&#x27;.">
+  <meta name="theme-color" content="#0a0b09">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Football Bets · Eduardo Alves">
+  <meta property="og:description" content="A desktop app that lists today&#x27;s football games, has a Claude agent analyse the ones you pick and suggest three bets, then keeps score of whether its estimates actually beat the bookmakers&#x27;.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Schibsted+Grotesk:wght@400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/project.css">
+</head>
+<body class="is-project">
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="brand" href="../../" aria-label="Eduardo Alves, home" data-i18n-attr="aria-label:a.home">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8.5 9.5h7M8.5 16h6M8.5 22.5h7M8.5 9.5v13" stroke="#0a0b09" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M18 22.5l4.25-13 4.25 13M19.6 17.6h5.3" stroke="#0a0b09" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="brand__name">Eduardo Alves</span>
+      </a>
+      <nav class="nav__links" aria-label="Sections" data-i18n-attr="aria-label:a.sections">
+        <span class="nav__pill" aria-hidden="true"></span>
+        <a href="../../#products" data-i18n="nav.products">Products</a>
+        <a href="../../#lab" data-i18n="nav.lab">Lab</a>
+        <a href="../../#job" data-i18n="nav.job">Day job</a>
+        <a href="../../#ai" data-i18n="nav.ai">AI</a>
+        <a href="../../#about" data-i18n="nav.about">About</a>
+      </nav>
+      <div class="nav__end">
+        <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:a.lang">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+        </div>
+        <a class="btn btn--lime btn--sm nav__cta" href="#contact" data-i18n="nav.cta">Let's talk</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+          <span class="sr" data-i18n="nav.menu">Menu</span>
+          <span class="menu-btn__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+    <div class="menu" id="menu" hidden>
+      <a href="../../#products" data-i18n="nav.products">Products</a>
+      <a href="../../#lab" data-i18n="nav.lab">Lab</a>
+      <a href="../../#job" data-i18n="nav.job">Day job</a>
+      <a href="../../#ai" data-i18n="nav.ai">AI</a>
+      <a href="../../#about" data-i18n="nav.about">About</a>
+      <a href="#contact" data-i18n="nav.cta">Let's talk</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="proj-hero wrap">
+      <a class="proj-back" href="../../#lab"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg><span data-i18n="proj.back">All work</span></a>
+      <h1 class="hero__title proj__title">Football Bets</h1>
+      <p class="proj__lead" data-i18n="pg.26">A desktop app that lists today&#x27;s football games, has a Claude agent analyse the ones you pick and suggest three bets, then keeps score of whether its estimates actually beat the bookmakers&#x27;.</p>
+      <dl class="proj__facts">
+        <div><dt><span data-i18n="pg.1">Role</span></dt><dd><span data-i18n="pg.2">Personal project, for fun with friends</span></dd></div>
+        <div><dt><span data-i18n="pg.3">Runs</span></dt><dd><span data-i18n="pg.4">Windows installer, no admin rights needed</span></dd></div>
+        <div><dt><span data-i18n="pg.5">Cost</span></dt><dd><span data-i18n="pg.6">About 0.2 cents per game analysed</span></dd></div>
+        <div class="proj__stack"><dt data-i18n="proj.stack">Stack</dt><dd><ul class="chips"><li>Electron</li><li>React</li><li>TypeScript</li><li>Claude Haiku</li><li>football-data.org</li><li>API-Football</li><li>Excel export</li></ul></dd></div>
+      </dl>
+      <div class="proj__actions">
+        <a class="btn btn--ghost" href="#contact" data-i18n="proj.cta">Build something like this</a>
+      </div>
+    </header>
+
+    <figure class="proj-cover wrap" data-reveal>
+      <img src="../../assets/projects/football-bets/hero.webp" width="1180" height="900" decoding="async" fetchpriority="high" alt="Football Bets main screen: today&#x27;s games, the Mission and recent picks" data-i18n-attr="alt:pg.27">
+    </figure>
+
+    <section class="proj-sec wrap" data-reveal>
+      <h2 class="proj-sec__title" data-i18n="pg.10">How an analysis works</h2>
+      <div class="proj-sec__body">
+        <ul class="proj-list">
+          <li data-i18n="pg.7">Gather: standings, recent form and head-to-head from football-data.org; prediction, team stats, injuries and odds from API-Football. Every source is cached and can fail on its own.</li>
+          <li data-i18n="pg.8">Analyse: one Claude Haiku call returns a fixed JSON shape: summary, key factors, data gaps, three bets (low, medium and high risk) and a top pick. The model refers to odds by reference, so it can&#x27;t invent a number.</li>
+          <li data-i18n="pg.9">Assess: you type the odd you&#x27;d bet at, and the app works out risk and value from the estimated chance and shows the lowest odd still worth taking.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="proj-sec wrap" data-reveal>
+      <h2 class="proj-sec__title" data-i18n="pg.16">Keeping it honest</h2>
+      <div class="proj-sec__body">
+        <ul class="proj-list">
+          <li data-i18n="pg.11">Learn from results: per risk level, how often bets won against how often the analysis said they would.</li>
+          <li data-i18n="pg.12">Is the analysis better than the market? Brier scores for the analysis against the bookmakers&#x27; own chances with the margin removed.</li>
+          <li data-i18n="pg.13">Closing line value: compares the odd you took with the last odds before kick-off.</li>
+          <li data-i18n="pg.14">A Mission mode with a hard bankroll limit, a weekly report and an assistant chat on every screen.</li>
+        </ul>
+        <p class="proj-note" data-i18n="pg.15">Built for fun among friends. It can&#x27;t make the analysis know more about football; it only shows when it&#x27;s too sure of itself.</p>
+      </div>
+    </section>
+    <section class="proj-sec wrap" data-reveal>
+      <h2 class="proj-sec__title" data-i18n="pg.25">Under the hood</h2>
+      <div class="proj-sec__body">
+        <dl class="spec proj-spec">
+          <div><dt><span data-i18n="pg.17">App</span></dt><dd><span data-i18n="pg.18">Electron, React and TypeScript with electron-vite; API keys stored encrypted with the operating system&#x27;s keychain</span></dd></div>
+          <div><dt><span data-i18n="pg.19">Limits</span></dt><dd><span data-i18n="pg.20">A rate limiter and a quota guard counted from each API&#x27;s response headers, with a reserve so the games list always loads; cache per data type, from 10 minutes for odds to 24 hours for head-to-head</span></dd></div>
+          <div><dt><span data-i18n="pg.21">Data</span></dt><dd><span data-i18n="pg.22">Picks exported to Excel, a daily backup, and the app keeps working in the tray to fetch results</span></dd></div>
+          <div><dt><span data-i18n="pg.23">Tests</span></dt><dd><span data-i18n="pg.24">Unit tests for merge logic, odds, risk, cache and quota; a self-test that runs one real analysis; a packaging check that no keys or data end up in the installer</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="proj-gallery wrap" aria-labelledby="gallery-title">
+      <h2 id="gallery-title" data-i18n="proj.gallery" data-reveal>Screens</h2>
+      <div class="shots">
+        <figure class="shot shot--wide" data-reveal>
+          <button class="shot__btn" type="button" data-lightbox aria-label="Enlarge: Suggested bets with price badges: green when the odd is at or above its value line." data-i18n-attr="aria-label:pg.29">
+            <img src="../../assets/projects/football-bets/suggested.webp" width="1180" height="900" loading="lazy" decoding="async" alt="">
+            <span class="shot__zoom" aria-hidden="true"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M9.5 2.5h4v4M6.5 13.5h-4v-4M13.5 2.5L9 7M2.5 13.5L7 9"/></svg></span>
+          </button>
+          <figcaption data-i18n="pg.28">Suggested bets with price badges: green when the odd is at or above its value line.</figcaption>
+        </figure>
+        <figure class="shot shot--wide" data-reveal>
+          <button class="shot__btn" type="button" data-lightbox aria-label="Enlarge: Reliability: estimated chance against how often bets really won." data-i18n-attr="aria-label:pg.31">
+            <img src="../../assets/projects/football-bets/reliability.webp" width="1180" height="900" loading="lazy" decoding="async" alt="">
+            <span class="shot__zoom" aria-hidden="true"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M9.5 2.5h4v4M6.5 13.5h-4v-4M13.5 2.5L9 7M2.5 13.5L7 9"/></svg></span>
+          </button>
+          <figcaption data-i18n="pg.30">Reliability: estimated chance against how often bets really won.</figcaption>
+        </figure>
+        <figure class="shot shot--wide" data-reveal>
+          <button class="shot__btn" type="button" data-lightbox aria-label="Enlarge: The assistant: ask for a pick and add it to the Mission." data-i18n-attr="aria-label:pg.33">
+            <img src="../../assets/projects/football-bets/assistant.webp" width="1084" height="742" loading="lazy" decoding="async" alt="">
+            <span class="shot__zoom" aria-hidden="true"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M9.5 2.5h4v4M6.5 13.5h-4v-4M13.5 2.5L9 7M2.5 13.5L7 9"/></svg></span>
+          </button>
+          <figcaption data-i18n="pg.32">The assistant: ask for a pick and add it to the Mission.</figcaption>
+        </figure>
+        <figure class="shot shot--wide" data-reveal>
+          <button class="shot__btn" type="button" data-lightbox aria-label="Enlarge: Mission: the bankroll over time, in the light theme." data-i18n-attr="aria-label:pg.35">
+            <img src="../../assets/projects/football-bets/mission.webp" width="980" height="800" loading="lazy" decoding="async" alt="">
+            <span class="shot__zoom" aria-hidden="true"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M9.5 2.5h4v4M6.5 13.5h-4v-4M13.5 2.5L9 7M2.5 13.5L7 9"/></svg></span>
+          </button>
+          <figcaption data-i18n="pg.34">Mission: the bankroll over time, in the light theme.</figcaption>
+        </figure>
+        <figure class="shot shot--wide" data-reveal>
+          <button class="shot__btn" type="button" data-lightbox aria-label="Enlarge: My bets: profit over time and closing line value." data-i18n-attr="aria-label:pg.37">
+            <img src="../../assets/projects/football-bets/mybets.webp" width="1180" height="900" loading="lazy" decoding="async" alt="">
+            <span class="shot__zoom" aria-hidden="true"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M9.5 2.5h4v4M6.5 13.5h-4v-4M13.5 2.5L9 7M2.5 13.5L7 9"/></svg></span>
+          </button>
+          <figcaption data-i18n="pg.36">My bets: profit over time and closing line value.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <nav class="proj-next wrap" aria-label="More projects" data-i18n-attr="aria-label:proj.more">
+      <a class="proj-next__card" href="../hands-3d/"><span class="proj-next__dir"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg><span data-i18n="proj.prev">Previous</span></span><span class="proj-next__name">Hands 3D</span></a>
+      <a class="proj-next__card proj-next__card--next" href="../homecontrol/"><span class="proj-next__dir"><span data-i18n="proj.next">Next</span><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span><span class="proj-next__name">HomeControl</span></a>
+    </nav>
+  </main>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact__inner">
+      <h2 id="contact-title" data-i18n="contact.title">Have a product in mind?</h2>
+      <p class="contact__sub" data-i18n="contact.sub">Tell me what you want to build. I'll come back with questions, a plan and an honest estimate.</p>
+      <div class="contact__actions">
+        <a class="btn btn--ink" id="mail-link" href="#contact" data-u="eduardo1996alves" data-d="gmail.com">
+          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M2.5 4.5L8 9l5.5-4.5"/></svg>
+          <span data-i18n="contact.email">Send an email</span>
+        </a>
+        <button class="copy" type="button" id="copy-mail" aria-live="polite">
+          <span class="copy__addr">eduardo1996alves [at] gmail.com</span>
+          <span class="copy__state">
+            <svg class="i copy__icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="8.5" height="8.5" rx="1.5"/><path d="M3 10.5V3.5A1 1 0 0 1 4 2.5h7"/></svg>
+            <svg class="i copy__done" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>
+            <span class="copy__label" data-i18n="contact.copy">Copy</span>
+          </span>
+        </button>
+      </div>
+      <ul class="contact__links">
+        <li><a href="https://www.linkedin.com/in/eduardo-alves-308007253/" target="_blank" rel="noopener">LinkedIn<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a></li>
+        <li><a href="../../assets/cv/Eduardo-Alves-CV-EN.pdf" download data-i18n-attr="href:cv.href"><span data-i18n="cv.short">CV (PDF)</span><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M3 13.5h10"/></svg></a></li>
+        <li><a href="https://github.com/edualves96" target="_blank" rel="noopener">GitHub<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© 2026 Eduardo Alves</p>
+      <p>Leiria, Portugal&nbsp;· <time id="clock">--:--</time></p>
+      <p data-i18n="footer.built">Hand-built with HTML, CSS and JavaScript.</p>
+      <a href="#top" data-i18n="footer.top">Back to top</a>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Screenshot" data-i18n-attr="aria-label:proj.lightbox">
+    <figure class="lightbox__fig">
+      <figcaption class="lightbox__cap"></figcaption>
+    </figure>
+    <div class="lightbox__bar">
+      <span class="lightbox__count"></span>
+      <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous screenshot" data-i18n-attr="aria-label:proj.lbPrev"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg></button>
+      <button class="lightbox__btn lightbox__next" type="button" aria-label="Next screenshot" data-i18n-attr="aria-label:proj.lbNext"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+      <button class="lightbox__btn lightbox__close" type="button" aria-label="Close" data-i18n-attr="aria-label:proj.lbClose"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+    </div>
+  </dialog>
+
+  <script src="../../js/i18n.js"></script>
+  <script>window.I18N_PT_PAGE = {"meta.title": "Football Bets · Eduardo Alves", "meta.desc": "Uma app de desktop que lista os jogos de futebol do dia, pede a um agente Claude que analise os que escolhes e sugira três apostas, e depois vai medindo se as estimativas batem mesmo as das casas de apostas.", "cv.href": "../../assets/cv/Eduardo-Alves-CV-PT.pdf", "pg.1": "Papel", "pg.2": "Projeto pessoal, para diversão entre amigos", "pg.3": "Corre", "pg.4": "Instalador para Windows, sem permissões de administrador", "pg.5": "Custo", "pg.6": "Cerca de 0,2 cêntimos por jogo analisado", "pg.7": "Recolher: classificação, forma recente e confrontos diretos do football-data.org; previsão, estatísticas, lesões e odds da API-Football. Cada fonte tem cache e pode falhar sozinha.", "pg.8": "Analisar: uma chamada ao Claude Haiku devolve um JSON com forma fixa: resumo, fatores-chave, dados em falta, três apostas (risco baixo, médio e alto) e uma escolha de topo. O modelo refere as odds por referência, por isso não consegue inventar números.", "pg.9": "Avaliar: escreves a odd a que apostarias e a app calcula o risco e o valor a partir da probabilidade estimada e mostra a odd mínima que ainda compensa.", "pg.10": "Como funciona uma análise", "pg.11": "Aprender com os resultados: por nível de risco, quantas apostas ganharam face às que a análise previa.", "pg.12": "A análise é melhor do que o mercado? Brier scores da análise contra as probabilidades das casas de apostas sem margem.", "pg.13": "Closing line value: compara a odd que apanhaste com as últimas odds antes do jogo.", "pg.14": "Um modo Missão com limite fixo de banca, um relatório semanal e um assistente em conversa em todos os ecrãs.", "pg.15": "Feito para diversão entre amigos. Não faz a análise saber mais de futebol; só mostra quando está demasiado confiante.", "pg.16": "Sem ilusões", "pg.17": "App", "pg.18": "Electron, React e TypeScript com electron-vite; chaves de API guardadas encriptadas no cofre do sistema operativo", "pg.19": "Limites", "pg.20": "Um limitador de pedidos e um controlo de quota contado a partir dos cabeçalhos de cada API, com reserva para a lista de jogos carregar sempre; cache por tipo de dados, de 10 minutos para odds a 24 horas para confrontos diretos", "pg.21": "Dados", "pg.22": "Escolhas exportadas para Excel, uma cópia de segurança diária, e a app continua no tabuleiro do sistema a buscar resultados", "pg.23": "Testes", "pg.24": "Testes unitários para junção de dados, odds, risco, cache e quota; um autoteste que corre uma análise real; uma verificação de que nenhuma chave ou dado vai parar ao instalador", "pg.25": "Por dentro", "pg.26": "Uma app de desktop que lista os jogos de futebol do dia, pede a um agente Claude que analise os que escolhes e sugira três apostas, e depois vai medindo se as estimativas batem mesmo as das casas de apostas.", "pg.27": "Ecrã principal do Football Bets: jogos do dia, a Missão e as escolhas recentes", "pg.28": "Apostas sugeridas com selos de preço: verde quando a odd está na linha de valor ou acima.", "pg.29": "Ampliar: Apostas sugeridas com selos de preço: verde quando a odd está na linha de valor ou acima.", "pg.30": "Fiabilidade: probabilidade estimada face às vezes que as apostas ganharam mesmo.", "pg.31": "Ampliar: Fiabilidade: probabilidade estimada face às vezes que as apostas ganharam mesmo.", "pg.32": "O assistente: pede uma escolha e junta-a à Missão.", "pg.33": "Ampliar: O assistente: pede uma escolha e junta-a à Missão.", "pg.34": "Missão: a banca ao longo do tempo, no tema claro.", "pg.35": "Ampliar: Missão: a banca ao longo do tempo, no tema claro.", "pg.36": "As minhas apostas: lucro ao longo do tempo e closing line value.", "pg.37": "Ampliar: As minhas apostas: lucro ao longo do tempo e closing line value."};</script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

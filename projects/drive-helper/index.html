@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drive Helper · Eduardo Alves</title>
+  <meta name="description" content="Talk to Alexa and let a Claude agent work with your Google Docs: find a file, read it aloud, summarise it or edit it, with every change waiting for a spoken yes.">
+  <meta name="theme-color" content="#0a0b09">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Drive Helper · Eduardo Alves">
+  <meta property="og:description" content="Talk to Alexa and let a Claude agent work with your Google Docs: find a file, read it aloud, summarise it or edit it, with every change waiting for a spoken yes.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Schibsted+Grotesk:wght@400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/project.css">
+</head>
+<body class="is-project">
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="brand" href="../../" aria-label="Eduardo Alves, home" data-i18n-attr="aria-label:a.home">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8.5 9.5h7M8.5 16h6M8.5 22.5h7M8.5 9.5v13" stroke="#0a0b09" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M18 22.5l4.25-13 4.25 13M19.6 17.6h5.3" stroke="#0a0b09" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="brand__name">Eduardo Alves</span>
+      </a>
+      <nav class="nav__links" aria-label="Sections" data-i18n-attr="aria-label:a.sections">
+        <span class="nav__pill" aria-hidden="true"></span>
+        <a href="../../#products" data-i18n="nav.products">Products</a>
+        <a href="../../#lab" data-i18n="nav.lab">Lab</a>
+        <a href="../../#job" data-i18n="nav.job">Day job</a>
+        <a href="../../#ai" data-i18n="nav.ai">AI</a>
+        <a href="../../#about" data-i18n="nav.about">About</a>
+      </nav>
+      <div class="nav__end">
+        <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:a.lang">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+        </div>
+        <a class="btn btn--lime btn--sm nav__cta" href="#contact" data-i18n="nav.cta">Let's talk</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+          <span class="sr" data-i18n="nav.menu">Menu</span>
+          <span class="menu-btn__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+    <div class="menu" id="menu" hidden>
+      <a href="../../#products" data-i18n="nav.products">Products</a>
+      <a href="../../#lab" data-i18n="nav.lab">Lab</a>
+      <a href="../../#job" data-i18n="nav.job">Day job</a>
+      <a href="../../#ai" data-i18n="nav.ai">AI</a>
+      <a href="../../#about" data-i18n="nav.about">About</a>
+      <a href="#contact" data-i18n="nav.cta">Let's talk</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="proj-hero wrap">
+      <a class="proj-back" href="../../#lab"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg><span data-i18n="proj.back">All work</span></a>
+      <h1 class="hero__title proj__title">Drive Helper</h1>
+      <p class="proj__lead" data-i18n="pg.33">Talk to Alexa and let a Claude agent work with your Google Docs: find a file, read it aloud, summarise it or edit it, with every change waiting for a spoken yes.</p>
+      <dl class="proj__facts">
+        <div><dt><span data-i18n="pg.1">Role</span></dt><dd><span data-i18n="pg.2">Personal prototype</span></dd></div>
+        <div><dt><span data-i18n="pg.3">Status</span></dt><dd><span data-i18n="pg.4">Tested live against Google Docs</span></dd></div>
+        <div><dt><span data-i18n="pg.5">Limit</span></dt><dd><span data-i18n="pg.6">Answers inside Alexa&#x27;s ~8 s window</span></dd></div>
+        <div class="proj__stack"><dt data-i18n="proj.stack">Stack</dt><dd><ul class="chips"><li>Alexa Skills Kit</li><li>AWS Lambda</li><li>Node.js</li><li>Claude API</li><li>Google Drive API</li><li>Google Docs API</li></ul></dd></div>
+      </dl>
+      <div class="proj__actions">
+        <a class="btn btn--ghost" href="#contact" data-i18n="proj.cta">Build something like this</a>
+      </div>
+    </header>
+
+    <div class="proj-cover wrap" data-reveal>
+      <div class="proj-stage proj-stage--voice">
+        <div class="voice voice--stage" role="group" aria-label="Demo voice exchange" data-i18n-attr="aria-label:pg.34">
+          <p class="chat__tag" data-i18n="demo">Demo</p>
+          <p class="voice__line" data-i18n="pg.35">“Alexa, ask Drive Helper to add buy milk to my shopping list.”</p>
+          <p class="voice__line voice__line--bot" data-i18n="pg.36">“I&#x27;ll add ‘buy milk’ to Shopping list. Should I go ahead?”</p>
+          <p class="voice__line" data-i18n="pg.37">“Yes.”</p>
+          <p class="voice__line voice__line--bot" data-i18n="pg.38">“Done. It&#x27;s at the end of Shopping list.”</p>
+        </div>
+        <p class="proj-stage__note" data-i18n="pg.39">The skill reads back what it is about to change and writes nothing until it hears a yes.</p>
+      </div>
+    </div>
+
+    <section class="proj-sec wrap" data-reveal>
+      <h2 class="proj-sec__title" data-i18n="pg.17">How it flows</h2>
+      <div class="proj-sec__body">
+        <ol class="proj-flow">
+          <li><h3><span data-i18n="pg.7">You speak</span></h3><p><span data-i18n="pg.8">“Alexa, ask Drive Helper to read my meeting notes.”</span></p></li>
+          <li><h3><span data-i18n="pg.9">Alexa skill</span></h3><p><span data-i18n="pg.10">Turns speech into text and back.</span></p></li>
+          <li><h3><span data-i18n="pg.11">AWS Lambda</span></h3><p><span data-i18n="pg.12">A Claude tool-use loop with four tools: search files, read a file, append to a doc, replace in a doc.</span></p></li>
+          <li><h3><span data-i18n="pg.13">Google Drive and Docs</span></h3><p><span data-i18n="pg.14">Through a service account that only sees files you share with it.</span></p></li>
+          <li><h3><span data-i18n="pg.15">Spoken reply</span></h3><p><span data-i18n="pg.16">Long documents are read in about one-minute chunks; say “next” to continue.</span></p></li>
+        </ol>
+      </div>
+    </section>
+    <section class="proj-sec wrap" data-reveal>
+      <h2 class="proj-sec__title" data-i18n="pg.28">What you can say</h2>
+      <div class="proj-sec__body">
+        <div class="proj-table"><table>
+          <thead><tr><th scope="col"><span data-i18n="pg.18">You say</span></th><th scope="col"><span data-i18n="pg.19">What happens</span></th></tr></thead>
+          <tbody>
+          <tr><th scope="row"><span data-i18n="pg.20">“Find my invoice from March”</span></th><td><span data-i18n="pg.21">Searches Drive by name and content</span></td></tr>
+          <tr><th scope="row"><span data-i18n="pg.22">“What does the contract say about payment terms?”</span></th><td><span data-i18n="pg.23">Claude reads the file and answers</span></td></tr>
+          <tr><th scope="row"><span data-i18n="pg.24">“Summarise the project brief”</span></th><td><span data-i18n="pg.25">A spoken summary</span></td></tr>
+          <tr><th scope="row"><span data-i18n="pg.26">“Add buy milk to my shopping list”</span></th><td><span data-i18n="pg.27">Stages the edit, asks “Should I go ahead?” and writes only after “yes”</span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+    <section class="proj-sec wrap" data-reveal>
+      <h2 class="proj-sec__title" data-i18n="pg.32">Safety</h2>
+      <div class="proj-sec__body">
+        <ul class="proj-list">
+          <li data-i18n="pg.29">The service account only sees files explicitly shared with it, only Google Docs can be edited, and there&#x27;s an optional allow-list of users.</li>
+          <li data-i18n="pg.30">Every edit is staged and needs a spoken yes; Google Docs version history is the undo button.</li>
+          <li data-i18n="pg.31">An offline test suite with mocked services, plus a live check against Google; runs on AWS Lambda or as an Alexa-hosted skill.</li>
+        </ul>
+      </div>
+    </section>
+
+
+
+    <nav class="proj-next wrap" aria-label="More projects" data-i18n-attr="aria-label:proj.more">
+      <a class="proj-next__card" href="../hand-gestures/"><span class="proj-next__dir"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg><span data-i18n="proj.prev">Previous</span></span><span class="proj-next__name">Hand Gestures</span></a>
+      <a class="proj-next__card proj-next__card--next" href="../ezluga/"><span class="proj-next__dir"><span data-i18n="proj.next">Next</span><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span><span class="proj-next__name">EZLuga</span></a>
+    </nav>
+  </main>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact__inner">
+      <h2 id="contact-title" data-i18n="contact.title">Have a product in mind?</h2>
+      <p class="contact__sub" data-i18n="contact.sub">Tell me what you want to build. I'll come back with questions, a plan and an honest estimate.</p>
+      <div class="contact__actions">
+        <a class="btn btn--ink" id="mail-link" href="#contact" data-u="eduardo1996alves" data-d="gmail.com">
+          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M2.5 4.5L8 9l5.5-4.5"/></svg>
+          <span data-i18n="contact.email">Send an email</span>
+        </a>
+        <button class="copy" type="button" id="copy-mail" aria-live="polite">
+          <span class="copy__addr">eduardo1996alves [at] gmail.com</span>
+          <span class="copy__state">
+            <svg class="i copy__icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="8.5" height="8.5" rx="1.5"/><path d="M3 10.5V3.5A1 1 0 0 1 4 2.5h7"/></svg>
+            <svg class="i copy__done" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>
+            <span class="copy__label" data-i18n="contact.copy">Copy</span>
+          </span>
+        </button>
+      </div>
+      <ul class="contact__links">
+        <li><a href="https://www.linkedin.com/in/eduardo-alves-308007253/" target="_blank" rel="noopener">LinkedIn<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a></li>
+        <li><a href="../../assets/cv/Eduardo-Alves-CV-EN.pdf" download data-i18n-attr="href:cv.href"><span data-i18n="cv.short">CV (PDF)</span><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M3 13.5h10"/></svg></a></li>
+        <li><a href="https://github.com/edualves96" target="_blank" rel="noopener">GitHub<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© 2026 Eduardo Alves</p>
+      <p>Leiria, Portugal&nbsp;· <time id="clock">--:--</time></p>
+      <p data-i18n="footer.built">Hand-built with HTML, CSS and JavaScript.</p>
+      <a href="#top" data-i18n="footer.top">Back to top</a>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Screenshot" data-i18n-attr="aria-label:proj.lightbox">
+    <figure class="lightbox__fig">
+      <figcaption class="lightbox__cap"></figcaption>
+    </figure>
+    <div class="lightbox__bar">
+      <span class="lightbox__count"></span>
+      <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous screenshot" data-i18n-attr="aria-label:proj.lbPrev"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg></button>
+      <button class="lightbox__btn lightbox__next" type="button" aria-label="Next screenshot" data-i18n-attr="aria-label:proj.lbNext"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+      <button class="lightbox__btn lightbox__close" type="button" aria-label="Close" data-i18n-attr="aria-label:proj.lbClose"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+    </div>
+  </dialog>
+
+  <script src="../../js/i18n.js"></script>
+  <script>window.I18N_PT_PAGE = {"meta.title": "Drive Helper · Eduardo Alves", "meta.desc": "Fala com a Alexa e deixa um agente Claude trabalhar com os teus Google Docs: encontrar um ficheiro, lê-lo em voz alta, resumi-lo ou editá-lo, com cada alteração à espera de um «sim» dito em voz alta.", "cv.href": "../../assets/cv/Eduardo-Alves-CV-PT.pdf", "pg.1": "Papel", "pg.2": "Protótipo pessoal", "pg.3": "Estado", "pg.4": "Testado ao vivo com Google Docs", "pg.5": "Limite", "pg.6": "Responde dentro da janela de ~8 s da Alexa", "pg.7": "Falas", "pg.8": "«Alexa, pede ao Drive Helper para ler as notas da reunião.»", "pg.9": "Skill da Alexa", "pg.10": "Transforma a fala em texto e o texto em fala.", "pg.11": "AWS Lambda", "pg.12": "Um ciclo de ferramentas do Claude com quatro ferramentas: pesquisar ficheiros, ler um ficheiro, acrescentar a um doc, substituir num doc.", "pg.13": "Google Drive e Docs", "pg.14": "Através de uma conta de serviço que só vê os ficheiros partilhados com ela.", "pg.15": "Resposta falada", "pg.16": "Documentos longos são lidos em blocos de cerca de um minuto; diz «seguinte» para continuar.", "pg.17": "Como funciona", "pg.18": "Dizes", "pg.19": "O que acontece", "pg.20": "«Encontra a minha fatura de março»", "pg.21": "Pesquisa no Drive por nome e conteúdo", "pg.22": "«O que diz o contrato sobre prazos de pagamento?»", "pg.23": "O Claude lê o ficheiro e responde", "pg.24": "«Resume o briefing do projeto»", "pg.25": "Um resumo falado", "pg.26": "«Junta comprar leite à lista de compras»", "pg.27": "Prepara a alteração, pergunta «Posso avançar?» e só escreve depois do «sim»", "pg.28": "O que podes dizer", "pg.29": "A conta de serviço só vê ficheiros partilhados explicitamente, só os Google Docs podem ser editados e há uma lista opcional de utilizadores autorizados.", "pg.30": "Cada alteração fica preparada e precisa de um «sim» falado; o histórico de versões do Google Docs é o botão de desfazer.", "pg.31": "Uma suite de testes offline com serviços simulados, mais uma verificação ao vivo com a Google; corre em AWS Lambda ou como skill alojada pela Alexa.", "pg.32": "Segurança", "pg.33": "Fala com a Alexa e deixa um agente Claude trabalhar com os teus Google Docs: encontrar um ficheiro, lê-lo em voz alta, resumi-lo ou editá-lo, com cada alteração à espera de um «sim» dito em voz alta.", "pg.34": "Conversa de voz de demonstração", "pg.35": "«Alexa, pede ao Drive Helper para juntar comprar leite à lista de compras.»", "pg.36": "«Vou juntar ‘comprar leite’ à Lista de compras. Posso avançar?»", "pg.37": "«Sim.»", "pg.38": "«Feito. Está no fim da Lista de compras.»", "pg.39": "A skill repete o que vai alterar e não escreve nada até ouvir um sim."};</script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

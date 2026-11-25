@@ -293,6 +293,19 @@ p { text-wrap: pretty; }
 .tile__link:hover { color: var(--lime); text-decoration-color: var(--lime); }
 .tile__link:hover .i { transform: translate(2px, -2px); }
 
+.tile__links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; margin-top: 22px; }
+.tile__links .tile__link { margin-top: 0; }
+.tile__more {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 36px; padding: 0 14px; border-radius: 99px;
+  font-size: 0.9rem; font-weight: 500; color: var(--fg);
+  background: rgba(242, 244, 236, 0.06); box-shadow: inset 0 0 0 1px var(--line-2);
+  transition: background-color 0.25s var(--ease), color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+.tile__more .i { transition: transform 0.35s var(--ease); }
+.tile__more:hover { background: var(--fg); color: var(--ink); box-shadow: none; }
+.tile__more:hover .i { transform: translateX(2px); }
+
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
 .chips li {
   padding: 3px 10px; border-radius: 99px;

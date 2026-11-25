@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HomeControl · Eduardo Alves</title>
+  <meta name="description" content="One control panel for the living room: the TV, the TV box, three air conditioners and the robot vacuum, on the PC and on our phones, with the same setup everywhere.">
+  <meta name="theme-color" content="#0a0b09">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="HomeControl · Eduardo Alves">
+  <meta property="og:description" content="One control panel for the living room: the TV, the TV box, three air conditioners and the robot vacuum, on the PC and on our phones, with the same setup everywhere.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Schibsted+Grotesk:wght@400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/project.css">
+</head>
+<body class="is-project">
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="brand" href="../../" aria-label="Eduardo Alves, home" data-i18n-attr="aria-label:a.home">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8.5 9.5h7M8.5 16h6M8.5 22.5h7M8.5 9.5v13" stroke="#0a0b09" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M18 22.5l4.25-13 4.25 13M19.6 17.6h5.3" stroke="#0a0b09" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="brand__name">Eduardo Alves</span>
+      </a>
+      <nav class="nav__links" aria-label="Sections" data-i18n-attr="aria-label:a.sections">
+        <span class="nav__pill" aria-hidden="true"></span>
+        <a href="../../#products" data-i18n="nav.products">Products</a>
+        <a href="../../#lab" data-i18n="nav.lab">Lab</a>
+        <a href="../../#job" data-i18n="nav.job">Day job</a>
+        <a href="../../#ai" data-i18n="nav.ai">AI</a>
+        <a href="../../#about" data-i18n="nav.about">About</a>
+      </nav>
+      <div class="nav__end">
+        <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:a.lang">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+        </div>
+        <a class="btn btn--lime btn--sm nav__cta" href="#contact" data-i18n="nav.cta">Let's talk</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+          <span class="sr" data-i18n="nav.menu">Menu</span>
+          <span class="menu-btn__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+    <div class="menu" id="menu" hidden>
+      <a href="../../#products" data-i18n="nav.products">Products</a>
+      <a href="../../#lab" data-i18n="nav.lab">Lab</a>
+      <a href="../../#job" data-i18n="nav.job">Day job</a>
+      <a href="../../#ai" data-i18n="nav.ai">AI</a>
+      <a href="../../#about" data-i18n="nav.about">About</a>
+      <a href="#contact" data-i18n="nav.cta">Let's talk</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="proj-hero wrap">
+      <a class="proj-back" href="../../#lab"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg><span data-i18n="proj.back">All work</span></a>
+      <h1 class="hero__title proj__title">HomeControl</h1>
+      <p class="proj__lead" data-i18n="pg.34">One control panel for the living room: the TV, the TV box, three air conditioners and the robot vacuum, on the PC and on our phones, with the same setup everywhere.</p>
+      <dl class="proj__facts">
+        <div><dt><span data-i18n="pg.1">Role</span></dt><dd><span data-i18n="pg.2">Personal project, used at home</span></dd></div>
+        <div><dt><span data-i18n="pg.3">Runs</span></dt><dd><span data-i18n="pg.4">Windows app and Android app</span></dd></div>
+        <div><dt><span data-i18n="pg.5">Devices</span></dt><dd><span data-i18n="pg.6">Five brands, five protocols</span></dd></div>
+        <div class="proj__stack"><dt data-i18n="proj.stack">Stack</dt><dd><ul class="chips"><li>Python</li><li>aiohttp</li><li>Android</li><li>Chaquopy</li><li>MQTT over mTLS</li><li>PyInstaller</li><li>AES-GCM</li></ul></dd></div>
+      </dl>
+      <div class="proj__actions">
+        <a class="btn btn--ghost" href="#contact" data-i18n="proj.cta">Build something like this</a>
+      </div>
+    </header>
+
+    <div class="proj-cover wrap" data-reveal>
+      <div class="proj-stage">
+        <div class="devices devices--stage" role="group" aria-label="Demo controls" data-i18n-attr="aria-label:pg.35">
+          <p class="chat__tag" data-i18n="demo">Demo</p>
+          <button class="device" type="button" aria-pressed="true"><span class="device__name" data-i18n="home.tv">TV</span><span class="device__state"><span data-i18n="home.on">On</span></span><span class="switch" aria-hidden="true"></span></button>
+          <button class="device" type="button" aria-pressed="true"><span class="device__name" data-i18n="home.ac">Living room AC</span><span class="device__state">22°</span><span class="switch" aria-hidden="true"></span></button>
+          <button class="device" type="button" aria-pressed="false"><span class="device__name">Roomba</span><span class="device__state" data-i18n="home.dock">Docked</span><span class="switch" aria-hidden="true"></span></button>
+        </div>
+        <p class="proj-stage__note" data-i18n="pg.36">A stand-in for the real panel: the actual app shows our own home devices, so this page explains how it is wired instead.</p>
+      </div>
+    </div>
+
+    <section class="proj-sec wrap" data-reveal>
+      <h2 class="proj-sec__title" data-i18n="pg.8">Why</h2>
+      <div class="proj-sec__body">
+        <p data-i18n="pg.7">Five devices meant five apps, some of them only on one phone. I wanted one page that controls everything on the local network, works for both of us with our own layouts, and keeps working when the router gives a device a new address.</p>
+      </div>
+    </section>
+    <section class="proj-sec wrap" data-reveal>
+      <h2 class="proj-sec__title" data-i18n="pg.21">How each device is controlled</h2>
+      <div class="proj-sec__body">
+        <div class="proj-table"><table>
+          <thead><tr><th scope="col"><span data-i18n="pg.9">Device</span></th><th scope="col"><span data-i18n="pg.10">How</span></th></tr></thead>
+          <tbody>
+          <tr><th scope="row"><span data-i18n="pg.11">Hisense TV</span></th><td><span data-i18n="pg.12">MQTT over mutual TLS with a paired client certificate; Wake-on-LAN to switch it on</span></td></tr>
+          <tr><th scope="row"><span data-i18n="pg.13">MEO TV box</span></th><td><span data-i18n="pg.14">Android TV Remote protocol v2, paired once</span></td></tr>
+          <tr><th scope="row"><span data-i18n="pg.15">Two Midea ACs</span></th><td><span data-i18n="pg.16">Local network on port 6444, with the device key fetched once from the cloud</span></td></tr>
+          <tr><th scope="row"><span data-i18n="pg.17">Samsung AC</span></th><td><span data-i18n="pg.18">SmartThings API</span></td></tr>
+          <tr><th scope="row"><span data-i18n="pg.19">Roomba</span></th><td><span data-i18n="pg.20">iRobot cloud through its AWS IoT endpoint, since it refuses local control</span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+    <section class="proj-sec wrap" data-reveal>
+      <h2 class="proj-sec__title" data-i18n="pg.26">What it does</h2>
+      <div class="proj-sec__body">
+        <ul class="proj-list">
+          <li data-i18n="pg.22">Two profiles, each with a PIN and its own card names, order and hidden cards.</li>
+          <li data-i18n="pg.23">Every card has More options built from what the device itself reports: modes, sources, apps.</li>
+          <li data-i18n="pg.24">Finds devices again by MAC address when their IP changes.</li>
+          <li data-i18n="pg.25">Sync between the PC and the phones: each setting remembers when it changed and the newest wins, encrypted with a shared passphrase (PBKDF2 and AES-GCM) before it leaves a device.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="proj-sec wrap" data-reveal>
+      <h2 class="proj-sec__title" data-i18n="pg.33">Under the hood</h2>
+      <div class="proj-sec__body">
+        <dl class="spec proj-spec">
+          <div><dt><span data-i18n="pg.27">PC</span></dt><dd><span data-i18n="pg.28">A Python aiohttp server on the machine and one HTML page in an Edge app window; a PyInstaller exe that stays in the tray while phones sync</span></dd></div>
+          <div><dt><span data-i18n="pg.29">Android</span></dt><dd><span data-i18n="pg.30">The same Python server running inside the phone with Chaquopy, shown in a WebView; a release-signed APK</span></dd></div>
+          <div><dt><span data-i18n="pg.31">Secrets</span></dt><dd><span data-i18n="pg.32">Windows Credential Manager on the PC, private app storage on Android; device keys are never written to the logs</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+
+
+    <nav class="proj-next wrap" aria-label="More projects" data-i18n-attr="aria-label:proj.more">
+      <a class="proj-next__card" href="../football-bets/"><span class="proj-next__dir"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg><span data-i18n="proj.prev">Previous</span></span><span class="proj-next__name">Football Bets</span></a>
+      <a class="proj-next__card proj-next__card--next" href="../hand-gestures/"><span class="proj-next__dir"><span data-i18n="proj.next">Next</span><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span><span class="proj-next__name">Hand Gestures</span></a>
+    </nav>
+  </main>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact__inner">
+      <h2 id="contact-title" data-i18n="contact.title">Have a product in mind?</h2>
+      <p class="contact__sub" data-i18n="contact.sub">Tell me what you want to build. I'll come back with questions, a plan and an honest estimate.</p>
+      <div class="contact__actions">
+        <a class="btn btn--ink" id="mail-link" href="#contact" data-u="eduardo1996alves" data-d="gmail.com">
+          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M2.5 4.5L8 9l5.5-4.5"/></svg>
+          <span data-i18n="contact.email">Send an email</span>
+        </a>
+        <button class="copy" type="button" id="copy-mail" aria-live="polite">
+          <span class="copy__addr">eduardo1996alves [at] gmail.com</span>
+          <span class="copy__state">
+            <svg class="i copy__icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="8.5" height="8.5" rx="1.5"/><path d="M3 10.5V3.5A1 1 0 0 1 4 2.5h7"/></svg>
+            <svg class="i copy__done" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>
+            <span class="copy__label" data-i18n="contact.copy">Copy</span>
+          </span>
+        </button>
+      </div>
+      <ul class="contact__links">
+        <li><a href="https://www.linkedin.com/in/eduardo-alves-308007253/" target="_blank" rel="noopener">LinkedIn<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a></li>
+        <li><a href="../../assets/cv/Eduardo-Alves-CV-EN.pdf" download data-i18n-attr="href:cv.href"><span data-i18n="cv.short">CV (PDF)</span><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M3 13.5h10"/></svg></a></li>
+        <li><a href="https://github.com/edualves96" target="_blank" rel="noopener">GitHub<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© 2026 Eduardo Alves</p>
+      <p>Leiria, Portugal&nbsp;· <time id="clock">--:--</time></p>
+      <p data-i18n="footer.built">Hand-built with HTML, CSS and JavaScript.</p>
+      <a href="#top" data-i18n="footer.top">Back to top</a>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Screenshot" data-i18n-attr="aria-label:proj.lightbox">
+    <figure class="lightbox__fig">
+      <figcaption class="lightbox__cap"></figcaption>
+    </figure>
+    <div class="lightbox__bar">
+      <span class="lightbox__count"></span>
+      <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous screenshot" data-i18n-attr="aria-label:proj.lbPrev"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg></button>
+      <button class="lightbox__btn lightbox__next" type="button" aria-label="Next screenshot" data-i18n-attr="aria-label:proj.lbNext"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+      <button class="lightbox__btn lightbox__close" type="button" aria-label="Close" data-i18n-attr="aria-label:proj.lbClose"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+    </div>
+  </dialog>
+
+  <script src="../../js/i18n.js"></script>
+  <script>window.I18N_PT_PAGE = {"meta.title": "HomeControl · Eduardo Alves", "meta.desc": "Um único painel para a sala: a TV, a box, três ares condicionados e o robô aspirador, no PC e nos nossos telemóveis, com a mesma configuração em todo o lado.", "cv.href": "../../assets/cv/Eduardo-Alves-CV-PT.pdf", "pg.1": "Papel", "pg.2": "Projeto pessoal, usado em casa", "pg.3": "Corre", "pg.4": "App para Windows e para Android", "pg.5": "Dispositivos", "pg.6": "Cinco marcas, cinco protocolos", "pg.7": "Cinco dispositivos eram cinco apps, algumas só num telemóvel. Queria uma página que controlasse tudo na rede de casa, servisse os dois com a disposição de cada um e continuasse a funcionar quando o router dá um endereço novo a um dispositivo.", "pg.8": "Porquê", "pg.9": "Dispositivo", "pg.10": "Como", "pg.11": "TV Hisense", "pg.12": "MQTT sobre TLS mútuo com um certificado emparelhado; Wake-on-LAN para a ligar", "pg.13": "Box MEO", "pg.14": "Protocolo Android TV Remote v2, emparelhado uma vez", "pg.15": "Dois AC Midea", "pg.16": "Rede local na porta 6444, com a chave do aparelho obtida uma vez na cloud", "pg.17": "AC Samsung", "pg.18": "API SmartThings", "pg.19": "Roomba", "pg.20": "Cloud da iRobot através do endpoint AWS IoT, já que recusa controlo local", "pg.21": "Como cada dispositivo é controlado", "pg.22": "Dois perfis, cada um com PIN e com os nomes, a ordem e os cartões escondidos que quiser.", "pg.23": "Cada cartão tem Mais opções construídas a partir do que o próprio aparelho indica: modos, fontes, apps.", "pg.24": "Volta a encontrar os dispositivos pelo endereço MAC quando o IP muda.", "pg.25": "Sincronização entre o PC e os telemóveis: cada definição lembra quando mudou e ganha a mais recente, encriptada com uma frase-passe partilhada (PBKDF2 e AES-GCM) antes de sair do aparelho.", "pg.26": "O que faz", "pg.27": "PC", "pg.28": "Um servidor Python aiohttp no computador e uma página HTML numa janela de app do Edge; um exe PyInstaller que fica no tabuleiro enquanto os telemóveis sincronizam", "pg.29": "Android", "pg.30": "O mesmo servidor Python a correr dentro do telemóvel com o Chaquopy, mostrado numa WebView; um APK assinado", "pg.31": "Segredos", "pg.32": "Gestor de credenciais do Windows no PC, armazenamento privado da app no Android; as chaves dos aparelhos nunca vão para os logs", "pg.33": "Por dentro", "pg.34": "Um único painel para a sala: a TV, a box, três ares condicionados e o robô aspirador, no PC e nos nossos telemóveis, com a mesma configuração em todo o lado.", "pg.35": "Controlos de demonstração", "pg.36": "Uma versão de demonstração do painel: a app real mostra os aparelhos da nossa casa, por isso esta página explica como está ligada."};</script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

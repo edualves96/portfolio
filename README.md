@@ -30,6 +30,22 @@ The page picks Portuguese for visitors whose browser is set to Portuguese, Engli
 
 The email address is assembled in `js/main.js` from `data-u` and `data-d` on the "Send an email" button, so it never appears whole in the HTML (fewer spam bots). LinkedIn and GitHub links are at the bottom of `index.html`.
 
+## Project pages
+
+Each project has its own page at `projects/<name>/` (EZLuga, upcc.pt, FindYourClub, Hands 3D, Football Bets, HomeControl, Hand Gestures, Drive Helper), linked from the home page tiles.
+
+The pages are generated: don't edit `projects/*/index.html` by hand.
+
+- Text (English and Portuguese side by side), facts, stack and gallery captions: `tools/projects_content.py`.
+- Layout: `tools/build_projects.py` (markup) and `css/project.css` (styles).
+- Screenshots: `assets/projects/<name>/` as WebP.
+
+After any change, regenerate all eight pages:
+
+```
+python -I tools/build_projects.py
+```
+
 ## Portrait and CV
 
 - Portrait: `assets/portrait.webp` (taken from the photo in your CV, 250px). Replace the file with any square photo to change it everywhere.

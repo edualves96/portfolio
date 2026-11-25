@@ -4,7 +4,8 @@
   const root = document.documentElement;
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
-  const PT = window.I18N_PT || {};
+  // Site-wide Portuguese strings, plus the current project page's own (if any).
+  const PT = Object.assign({}, window.I18N_PT || {}, window.I18N_PT_PAGE || {});
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   const store = {
@@ -152,7 +153,11 @@
   }
 
   if ("IntersectionObserver" in window) {
-    const sections = links.map((a) => $(a.getAttribute("href"))).filter(Boolean);
+    // Only in-page links (#section) drive the pill; project pages link back to the home page.
+    const sections = links
+      .filter((a) => a.getAttribute("href").startsWith("#"))
+      .map((a) => $(a.getAttribute("href")))
+      .filter(Boolean);
     const visible = new Set();
     const sio = new IntersectionObserver((entries) => {
       entries.forEach((e) => (e.isIntersecting ? visible.add(e.target.id) : visible.delete(e.target.id)));
@@ -255,6 +260,43 @@
     };
     tick();
     setInterval(tick, 15000);
+  }
+
+  /* ---------- Screenshot lightbox (project pages) ---------- */
+  const lightbox = $(".lightbox");
+  if (lightbox && typeof lightbox.showModal === "function") {
+    const shots = $$("[data-lightbox]");
+    // The image is created here, so the page never ships an <img> without a source.
+    const lbImg = document.createElement("img");
+    lbImg.className = "lightbox__img";
+    lbImg.alt = "";
+    $(".lightbox__fig", lightbox).prepend(lbImg);
+    const lbCap = $(".lightbox__cap", lightbox);
+    const lbCount = $(".lightbox__count", lightbox);
+    let current = 0;
+    const show = (i) => {
+      current = (i + shots.length) % shots.length;
+      const shot = shots[current];
+      const img = $("img", shot);
+      const cap = shot.closest("figure").querySelector("figcaption");
+      lbImg.style.animation = "none";
+      void lbImg.offsetWidth; // restart the entrance for each image
+      lbImg.style.animation = "";
+      lbImg.src = img.currentSrc || img.src;
+      lbImg.alt = cap ? cap.textContent : "";
+      lbCap.textContent = cap ? cap.textContent : "";
+      lbCount.textContent = `${current + 1} / ${shots.length}`;
+    };
+    shots.forEach((shot, i) => shot.addEventListener("click", () => { show(i); lightbox.showModal(); }));
+    $(".lightbox__prev", lightbox).addEventListener("click", () => show(current - 1));
+    $(".lightbox__next", lightbox).addEventListener("click", () => show(current + 1));
+    $(".lightbox__close", lightbox).addEventListener("click", () => lightbox.close());
+    lightbox.addEventListener("click", (e) => { if (e.target === lightbox) lightbox.close(); });
+    lightbox.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") show(current - 1);
+      if (e.key === "ArrowRight") show(current + 1);
+    });
+    if (shots.length < 2) $$(".lightbox__prev, .lightbox__next", lightbox).forEach((b) => (b.hidden = true));
   }
 
   /* ---------- Start ---------- */

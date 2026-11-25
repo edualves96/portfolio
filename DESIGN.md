@@ -366,6 +366,14 @@ The lime band: padding of 96 to 168px, the display-close question in ink, lead t
 - **About portrait:** a 112px round portrait above "The path" heading, hairline ring plus the float shadow. Same source image (`assets/portrait.webp`, 250px); never display it larger than about 125px.
 - **CV download:** a ghost button with a download glyph under the languages, and a "CV (PDF)" link in the contact close. Both point at the PDF for the active language (`assets/cv/Eduardo-Alves-CV-EN.pdf` / `-PT.pdf`); on hover the glyph drops 2px instead of sliding right.
 
+### Project Pages
+Generated from `tools/projects_content.py`, styled by `css/project.css`, same tokens as the home page.
+- **Hero:** a "All work" pill back link (hairline ring), the project name at display size, a lead paragraph, then a facts row (three label/value cells on row rules) and the stack as chips; actions are the lime live-site button (when the product is public) and a ghost "Build something like this" that jumps to the contact close.
+- **Cover:** a full-width screenshot with a strong ring and the tile radius, no shadow (it sits on the ground). Phone-first products show three phone screens on a tile ground with the phone drop; projects without real screens show a live fragment (device toggles, hand landmarks, voice lines) beside a one-line note.
+- **Sections:** two columns, a sticky title at title size on the left and the body on the right, separated by hairlines. Bodies use the spec rows, plain lists with grey square markers, row-rule tables, and a numbered flow (the last step's number is lime, because it marks the outcome).
+- **Gallery:** a 12-column grid, wide shots two per row, phone shots three or four per row; each shot is a zoom button that opens the lightbox (backdrop at 94% bench black with a 6px blur, caption, mono counter, ring buttons, arrow keys, Esc).
+- **Previous / next:** two tile cards at the end; the name turns lime on hover.
+
 ### Toolbox Marquee and Timeline
 - **Marquee:** a full-bleed band between two hairlines; tool names at 500 separated by 8px diamonds, looping every 48s at constant speed, edges masked, paused on hover.
 - **Timeline:** rows on hairlines with a 6.5rem mono year column; current years are lime.

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hand Gestures · Eduardo Alves</title>
+  <meta name="description" content="Control the PC with webcam hand gestures. Face recognition knows who is in front of the camera, switches to their gestures, and locks everything for anyone it doesn&#x27;t know.">
+  <meta name="theme-color" content="#0a0b09">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Hand Gestures · Eduardo Alves">
+  <meta property="og:description" content="Control the PC with webcam hand gestures. Face recognition knows who is in front of the camera, switches to their gestures, and locks everything for anyone it doesn&#x27;t know.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Schibsted+Grotesk:wght@400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/project.css">
+</head>
+<body class="is-project">
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="brand" href="../../" aria-label="Eduardo Alves, home" data-i18n-attr="aria-label:a.home">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8.5 9.5h7M8.5 16h6M8.5 22.5h7M8.5 9.5v13" stroke="#0a0b09" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M18 22.5l4.25-13 4.25 13M19.6 17.6h5.3" stroke="#0a0b09" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="brand__name">Eduardo Alves</span>
+      </a>
+      <nav class="nav__links" aria-label="Sections" data-i18n-attr="aria-label:a.sections">
+        <span class="nav__pill" aria-hidden="true"></span>
+        <a href="../../#products" data-i18n="nav.products">Products</a>
+        <a href="../../#lab" data-i18n="nav.lab">Lab</a>
+        <a href="../../#job" data-i18n="nav.job">Day job</a>
+        <a href="../../#ai" data-i18n="nav.ai">AI</a>
+        <a href="../../#about" data-i18n="nav.about">About</a>
+      </nav>
+      <div class="nav__end">
+        <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:a.lang">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+        </div>
+        <a class="btn btn--lime btn--sm nav__cta" href="#contact" data-i18n="nav.cta">Let's talk</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+          <span class="sr" data-i18n="nav.menu">Menu</span>
+          <span class="menu-btn__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+    <div class="menu" id="menu" hidden>
+      <a href="../../#products" data-i18n="nav.products">Products</a>
+      <a href="../../#lab" data-i18n="nav.lab">Lab</a>
+      <a href="../../#job" data-i18n="nav.job">Day job</a>
+      <a href="../../#ai" data-i18n="nav.ai">AI</a>
+      <a href="../../#about" data-i18n="nav.about">About</a>
+      <a href="#contact" data-i18n="nav.cta">Let's talk</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="proj-hero wrap">
+      <a class="proj-back" href="../../#lab"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg><span data-i18n="proj.back">All work</span></a>
+      <h1 class="hero__title proj__title">Hand Gestures</h1>
+      <p class="proj__lead" data-i18n="pg.38">Control the PC with webcam hand gestures. Face recognition knows who is in front of the camera, switches to their gestures, and locks everything for anyone it doesn&#x27;t know.</p>
+      <dl class="proj__facts">
+        <div><dt><span data-i18n="pg.1">Role</span></dt><dd><span data-i18n="pg.2">Personal project</span></dd></div>
+        <div><dt><span data-i18n="pg.3">Runs</span></dt><dd><span data-i18n="pg.4">Windows app, configured with one JSON file</span></dd></div>
+        <div><dt><span data-i18n="pg.5">Privacy</span></dt><dd><span data-i18n="pg.6">No photos stored</span></dd></div>
+        <div class="proj__stack"><dt data-i18n="proj.stack">Stack</dt><dd><ul class="chips"><li>Python</li><li>OpenCV</li><li>MediaPipe</li><li>YuNet</li><li>SFace</li><li>Claude API</li><li>PyInstaller</li></ul></dd></div>
+      </dl>
+      <div class="proj__actions">
+        <a class="btn btn--ghost" href="#contact" data-i18n="proj.cta">Build something like this</a>
+      </div>
+    </header>
+
+    <div class="proj-cover wrap" data-reveal>
+      <div class="proj-stage proj-stage--hand">
+        <svg class="handviz handviz--big" viewBox="0 0 200 200" role="img" aria-label="Hand tracked as 21 landmarks" data-i18n-attr="aria-label:gest.label">
+          <g class="handviz__bones">
+            <path d="M100 185L72 170L52 148L40 126L32 106"/><path d="M100 185L78 112L72 80L68 58L65 38"/>
+            <path d="M78 112L100 108L100 72L100 48L100 26"/><path d="M100 108L120 112L126 80L130 58L133 40"/>
+            <path d="M120 112L138 122L148 98L154 82L158 66M100 185L138 122"/>
+          </g>
+          <g class="handviz__joints">
+            <circle cx="100" cy="185" r="3.2"/><circle cx="72" cy="170" r="3.2"/><circle cx="52" cy="148" r="3.2"/><circle cx="40" cy="126" r="3.2"/><circle cx="32" cy="106" r="3.2"/>
+            <circle cx="78" cy="112" r="3.2"/><circle cx="72" cy="80" r="3.2"/><circle cx="68" cy="58" r="3.2"/>
+            <circle cx="100" cy="108" r="3.2"/><circle cx="100" cy="72" r="3.2"/><circle cx="100" cy="48" r="3.2"/><circle cx="100" cy="26" r="3.2"/>
+            <circle cx="120" cy="112" r="3.2"/><circle cx="126" cy="80" r="3.2"/><circle cx="130" cy="58" r="3.2"/><circle cx="133" cy="40" r="3.2"/>
+            <circle cx="138" cy="122" r="3.2"/><circle cx="148" cy="98" r="3.2"/><circle cx="154" cy="82" r="3.2"/><circle cx="158" cy="66" r="3.2"/>
+            <circle class="handviz__tip" cx="65" cy="38" r="5"/>
+          </g>
+        </svg>
+        <p class="proj-stage__note" data-i18n="pg.39">Each hand is tracked as 21 points; poses are read from which fingers are open and where they point.</p>
+      </div>
+    </div>
+
+    <section class="proj-sec wrap" data-reveal>
+      <h2 class="proj-sec__title" data-i18n="pg.11">How it works</h2>
+      <div class="proj-sec__body">
+        <ul class="proj-list">
+          <li data-i18n="pg.7">Hold a pose for about half a second to fire it, sweep an open hand to switch windows, and chain quick poses into combos.</li>
+          <li data-i18n="pg.8">A profile per person and sub-profiles per context, such as work, media and home, switched by holding an L shape.</li>
+          <li data-i18n="pg.9">Two-hand gestures, like pointing at your own wrist with the other hand.</li>
+          <li data-i18n="pg.10">An on-screen keyboard, and a gesture list in the preview that lights up the pose you&#x27;re holding.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="proj-sec wrap" data-reveal>
+      <h2 class="proj-sec__title" data-i18n="pg.30">Gesture map</h2>
+      <div class="proj-sec__body">
+        <div class="proj-table"><table>
+          <thead><tr><th scope="col"><span data-i18n="pg.12">Gesture</span></th><th scope="col"><span data-i18n="pg.13">Work</span></th><th scope="col"><span data-i18n="pg.14">Media</span></th></tr></thead>
+          <tbody>
+          <tr><th scope="row"><span data-i18n="pg.15">Thumbs up</span></th><td><span data-i18n="pg.16">Opens VS Code</span></td><td><span data-i18n="pg.17">Volume up</span></td></tr>
+          <tr><th scope="row"><span data-i18n="pg.18">Call (thumb and pinky)</span></th><td><span data-i18n="pg.19">Opens SQL Server Management Studio</span></td><td><span data-i18n="pg.20">Previous track</span></td></tr>
+          <tr><th scope="row"><span data-i18n="pg.21">Peace (index and middle)</span></th><td><span data-i18n="pg.22">Opens a terminal running Claude Code</span></td><td><span data-i18n="pg.23">Next track</span></td></tr>
+          <tr><th scope="row"><span data-i18n="pg.24">Fist</span></th><td><span data-i18n="pg.25">Opens the work tab group in Chrome</span></td><td><span data-i18n="pg.26">Play / pause</span></td></tr>
+          <tr><th scope="row"><span data-i18n="pg.27">Point (index only)</span></th><td><span data-i18n="pg.28">—</span></td><td><span data-i18n="pg.29">Mute</span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+    <section class="proj-sec wrap" data-reveal>
+      <h2 class="proj-sec__title" data-i18n="pg.34">Faces and privacy</h2>
+      <div class="proj-sec__body">
+        <ul class="proj-list">
+          <li data-i18n="pg.31">YuNet finds faces and SFace recognises them, twice a second in the background.</li>
+          <li data-i18n="pg.32">Only enrolled people can fire gestures, and with nobody in view for 10 seconds it pauses.</li>
+          <li data-i18n="pg.33">No photos are stored: a face becomes a signature of 128 numbers that can&#x27;t be turned back into a picture, kept outside the project folder.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="proj-sec wrap" data-reveal>
+      <h2 class="proj-sec__title" data-i18n="pg.37">Canvas and Claude</h2>
+      <div class="proj-sec__body">
+        <ul class="proj-list">
+          <li data-i18n="pg.35">Canvas mode: draw in the air, or hold an object up with both hands to scan it into a rough 3D model.</li>
+          <li data-i18n="pg.36">Press I and the Claude API identifies the scanned object with web search, finds its manual and a matching 3D model on Sketchfab, Printables or 3dassets.dev, with the author&#x27;s licence shown.</li>
+        </ul>
+      </div>
+    </section>
+
+
+
+    <nav class="proj-next wrap" aria-label="More projects" data-i18n-attr="aria-label:proj.more">
+      <a class="proj-next__card" href="../homecontrol/"><span class="proj-next__dir"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg><span data-i18n="proj.prev">Previous</span></span><span class="proj-next__name">HomeControl</span></a>
+      <a class="proj-next__card proj-next__card--next" href="../drive-helper/"><span class="proj-next__dir"><span data-i18n="proj.next">Next</span><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span><span class="proj-next__name">Drive Helper</span></a>
+    </nav>
+  </main>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact__inner">
+      <h2 id="contact-title" data-i18n="contact.title">Have a product in mind?</h2>
+      <p class="contact__sub" data-i18n="contact.sub">Tell me what you want to build. I'll come back with questions, a plan and an honest estimate.</p>
+      <div class="contact__actions">
+        <a class="btn btn--ink" id="mail-link" href="#contact" data-u="eduardo1996alves" data-d="gmail.com">
+          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1.5"/><path d="M2.5 4.5L8 9l5.5-4.5"/></svg>
+          <span data-i18n="contact.email">Send an email</span>
+        </a>
+        <button class="copy" type="button" id="copy-mail" aria-live="polite">
+          <span class="copy__addr">eduardo1996alves [at] gmail.com</span>
+          <span class="copy__state">
+            <svg class="i copy__icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="8.5" height="8.5" rx="1.5"/><path d="M3 10.5V3.5A1 1 0 0 1 4 2.5h7"/></svg>
+            <svg class="i copy__done" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>
+            <span class="copy__label" data-i18n="contact.copy">Copy</span>
+          </span>
+        </button>
+      </div>
+      <ul class="contact__links">
+        <li><a href="https://www.linkedin.com/in/eduardo-alves-308007253/" target="_blank" rel="noopener">LinkedIn<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a></li>
+        <li><a href="../../assets/cv/Eduardo-Alves-CV-EN.pdf" download data-i18n-attr="href:cv.href"><span data-i18n="cv.short">CV (PDF)</span><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M3 13.5h10"/></svg></a></li>
+        <li><a href="https://github.com/edualves96" target="_blank" rel="noopener">GitHub<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© 2026 Eduardo Alves</p>
+      <p>Leiria, Portugal&nbsp;· <time id="clock">--:--</time></p>
+      <p data-i18n="footer.built">Hand-built with HTML, CSS and JavaScript.</p>
+      <a href="#top" data-i18n="footer.top">Back to top</a>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Screenshot" data-i18n-attr="aria-label:proj.lightbox">
+    <figure class="lightbox__fig">
+      <figcaption class="lightbox__cap"></figcaption>
+    </figure>
+    <div class="lightbox__bar">
+      <span class="lightbox__count"></span>
+      <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous screenshot" data-i18n-attr="aria-label:proj.lbPrev"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg></button>
+      <button class="lightbox__btn lightbox__next" type="button" aria-label="Next screenshot" data-i18n-attr="aria-label:proj.lbNext"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+      <button class="lightbox__btn lightbox__close" type="button" aria-label="Close" data-i18n-attr="aria-label:proj.lbClose"><svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+    </div>
+  </dialog>
+
+  <script src="../../js/i18n.js"></script>
+  <script>window.I18N_PT_PAGE = {"meta.title": "Hand Gestures · Eduardo Alves", "meta.desc": "Controla o PC com gestos à frente da webcam. O reconhecimento facial sabe quem está à frente da câmara, muda para os gestos dessa pessoa e bloqueia tudo para quem não conhece.", "cv.href": "../../assets/cv/Eduardo-Alves-CV-PT.pdf", "pg.1": "Papel", "pg.2": "Projeto pessoal", "pg.3": "Corre", "pg.4": "App para Windows, configurada com um ficheiro JSON", "pg.5": "Privacidade", "pg.6": "Não guarda fotografias", "pg.7": "Mantém uma pose cerca de meio segundo para a ativar, varre a mão aberta para mudar de janela e encadeia poses rápidas em combos.", "pg.8": "Um perfil por pessoa e subperfis por contexto, como trabalho, multimédia e casa, trocados mantendo a forma de um L.", "pg.9": "Gestos com as duas mãos, como apontar para o próprio pulso com a outra mão.", "pg.10": "Um teclado no ecrã e uma lista de gestos na pré-visualização que acende a pose que estás a fazer.", "pg.11": "Como funciona", "pg.12": "Gesto", "pg.13": "Trabalho", "pg.14": "Multimédia", "pg.15": "Polegar para cima", "pg.16": "Abre o VS Code", "pg.17": "Aumenta o volume", "pg.18": "Telefone (polegar e mindinho)", "pg.19": "Abre o SQL Server Management Studio", "pg.20": "Faixa anterior", "pg.21": "Paz (indicador e médio)", "pg.22": "Abre um terminal com o Claude Code", "pg.23": "Faixa seguinte", "pg.24": "Punho", "pg.25": "Abre o grupo de separadores de trabalho no Chrome", "pg.26": "Reproduzir / pausa", "pg.27": "Apontar (só indicador)", "pg.28": "—", "pg.29": "Silenciar", "pg.30": "Mapa de gestos", "pg.31": "O YuNet encontra os rostos e o SFace reconhece-os, duas vezes por segundo em segundo plano.", "pg.32": "Só pessoas registadas podem ativar gestos, e se ninguém estiver à frente durante 10 segundos, pausa.", "pg.33": "Não guarda fotografias: um rosto passa a ser uma assinatura de 128 números que não se consegue voltar a transformar em imagem, guardada fora da pasta do projeto.", "pg.34": "Rostos e privacidade", "pg.35": "Modo tela: desenha no ar, ou segura um objeto com as duas mãos para o digitalizar num modelo 3D aproximado.", "pg.36": "Carrega no I e a API do Claude identifica o objeto digitalizado com pesquisa na web, encontra o manual e um modelo 3D no Sketchfab, Printables ou 3dassets.dev, com a licença do autor visível.", "pg.37": "Tela e Claude", "pg.38": "Controla o PC com gestos à frente da webcam. O reconhecimento facial sabe quem está à frente da câmara, muda para os gestos dessa pessoa e bloqueia tudo para quem não conhece.", "pg.39": "Cada mão é seguida como 21 pontos; as poses vêm de que dedos estão abertos e para onde apontam."};</script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

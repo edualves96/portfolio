@@ -6,3 +6,5 @@ exclude:
   - assets/shots/*.json
   - assets/*.json
   - cv
+  - tools
+  - assets/projects/*/*.json

@@ -157,5 +157,19 @@ window.I18N_PT = {
   "contact.subject": "Projeto",
 
   "footer.built": "Feito à mão com HTML, CSS e JavaScript.",
-  "footer.top": "Voltar ao topo"
+  "footer.top": "Voltar ao topo",
+
+  "tile.more": "Ver o projeto",
+  "a.home": "Eduardo Alves, página inicial",
+  "proj.back": "Todo o trabalho",
+  "proj.stack": "Tecnologias",
+  "proj.cta": "Construir algo assim",
+  "proj.gallery": "Ecrãs",
+  "proj.prev": "Anterior",
+  "proj.next": "Seguinte",
+  "proj.more": "Mais projetos",
+  "proj.lightbox": "Captura de ecrã",
+  "proj.lbPrev": "Captura anterior",
+  "proj.lbNext": "Captura seguinte",
+  "proj.lbClose": "Fechar"
 };
